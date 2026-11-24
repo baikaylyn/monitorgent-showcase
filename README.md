@@ -82,7 +82,15 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 
 ## 下载
 
-暂未提供公开下载（未做公证分发）。如需试用或反馈问题，请在本仓库开 Issue。
+DMG 分发包（`MonitorGent-0.9.2.dmg`）**未做 Apple 公证**，首次打开会被 Gatekeeper 拦一次，属正常现象：
+
+1. 把 `MonitorGent.app` 拖进「应用程序」
+2. 右键 `MonitorGent.app` → 打开 → 再点「打开」
+3. 若仍打不开，终端执行一次 `xattr -dr com.apple.quarantine /Applications/MonitorGent.app`
+
+包内附 `安装说明.txt`。需要公开分发时再补 Developer ID 证书与公证。
+
+如需试用或反馈问题，也可在本仓库开 Issue。
 
 ## 隐私
 
