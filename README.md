@@ -65,6 +65,8 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 
 ## 截图
 
+四张面板图均为实机窗口截图（只截应用面板，不含桌面与菜单栏），进程名、电池序列号已打码。
+
 | 概览 | 内存 |
 |---|---|
 | ![概览](screenshots/panel-overview.png) | ![内存](screenshots/panel-memory.png) |
