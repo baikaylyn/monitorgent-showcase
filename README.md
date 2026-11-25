@@ -73,7 +73,7 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 |---|---|
 | ![电池](screenshots/panel-battery.png) | ![传感器](screenshots/panel-sensors.png) |
 
-菜单栏与功率曲线：
+菜单栏与功率曲线（示意图，数值仅作示例）：
 
 ![菜单栏](screenshots/menubar.png)
 
