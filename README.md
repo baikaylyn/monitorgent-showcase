@@ -8,7 +8,7 @@
 
 <p align="center">
   <img alt="platform" src="https://img.shields.io/badge/platform-macOS%2013%2B-lightgrey">
-  <img alt="version" src="https://img.shields.io/badge/version-0.9.2-blue">
+  <img alt="version" src="https://img.shields.io/badge/version-0.9.3-blue">
   <img alt="license" src="https://img.shields.io/badge/license-Proprietary-red">
 </p>
 
@@ -31,7 +31,8 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 **概览**
 - 整机功率曲线（瓦特），标注适配器电压 / 电流
 - SoC 功率分解：CPU / GPU / ANE / DRAM / 其他
-- CPU-P、CPU-E、GPU、电池、SSD、内存温度
+- CPU 用户 / 系统双色占用波形
+- CPU-P、CPU-E、GPU、电池、SSD、内存温度，逐点标注
 - P 核 / E 核实时频率与占用
 - GPU 占用、显存
 
@@ -39,7 +40,13 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 - 内存压力环 + 已用内存环
 - 四段构成条：App / 联动 / 已压缩 / 可用
 - 交换分区读写、内存占用进程排行
+- 多卷存储：内置盘与外接卷分列显示容量与占用
+- 进程排行双列：CPU 占比 + 驻留内存（RSS，与 `ps` 口径一致）
 - 「不可回收」按 `(wired + compressed) / total` 计算，压力等级直接读内核 `kern.memorystatus_vm_pressure_level`，与「活动监视器」一致
+
+**网络**
+- Wi-Fi 当前 SSID、本机地址
+- 公网 IP 与国家码徽章，上下行实时速率
 
 **电池**
 - 电量与健康度双环
@@ -51,9 +58,10 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 - CPU-P / CPU-E / GPU / 电池 / SSD / 内存 / 无线温度，显示最低–最高–均值
 
 **其他**
+- 面板高度按屏幕可见区自适应，内容超高时面板内滚动，页签不会被挤出屏幕
 - 开机自启（`SMAppService`，失败自动回退 LaunchAgent）
 - 无 Dock 图标，只驻留菜单栏
-- 全部本地读取，无网络请求
+- 全部本地读取，无网络请求（公网 IP 走系统 DNS 解析，不上传任何数据）
 
 ## 截图
 
@@ -78,11 +86,11 @@ MonitorGent 是一个 macOS 菜单栏硬件监测工具。菜单栏常显「内�
 
 ## 版本
 
-当前版本 **0.9.2（build 11）**，详见 [CHANGELOG.md](CHANGELOG.md)。
+当前版本 **0.9.3（build 17）**，详见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 下载
 
-DMG 分发包（`MonitorGent-0.9.2.dmg`）**未做 Apple 公证**，首次打开会被 Gatekeeper 拦一次，属正常现象：
+DMG 分发包（`MonitorGent-0.9.3.dmg`）**未做 Apple 公证**，首次打开会被 Gatekeeper 拦一次，属正常现象：
 
 1. 把 `MonitorGent.app` 拖进「应用程序」
 2. 右键 `MonitorGent.app` → 打开 → 再点「打开」
